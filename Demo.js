@@ -1,0 +1,104 @@
+var Assignment4Background = document.getElementById("Assignment4Background");
+
+function clickOption(value) {
+    Assignment4Background.style.backgroundColor = value;
+    Assignment4Background.innerHTML = "You have selected the " + value;
+}
+
+var img = document.getElementById("image");
+var text = document.getElementById("text");
+
+function setClass(e) {
+  var select = e.target;
+  img.src = select.options[select.selectedIndex].value;
+  text.innerHTML = select.options[select.selectedIndex].dataset.description;
+  // use select.options[select.selectedIndex].getAttribute('data-description'); if you need to support older browsers
+  return false;
+}
+
+document.getElementById("imgList").onchange = setClass;
+
+// Assignment1
+var Assignment1 = document.getElementById('myAssignment1');
+
+// Get the button that opens the modal
+var btnAssignment1 = document.getElementById("myBtnAssignment1");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close1")[0];
+
+// When the user clicks the button, open the modal 
+btnAssignment1.onclick = function () {
+    Assignment1.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    Assignment1.style.display = "none";
+}
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', "https://ipinfo.io/json", true);
+xhr.send();
+
+xhr.addEventListener("readystatechange", proccessRequest, false);
+
+function proccessRequest(e) {
+  if (xhr.readyState == 4 && xhr.status == 200) {
+      var obj = JSON.parse(xhr.responseText);
+      document.getElementById("demo").innerHTML = obj.ip + ", " + obj.country + ", " + obj.org; 
+  }
+}
+
+
+// Assignment2
+var Assignment2 = document.getElementById('myAssignment2');
+var btnAssignment2 = document.getElementById("myBtnAssignment2");
+var span = document.getElementsByClassName("close2")[0];
+span.onclick = function () {
+    Assignment2.style.display = "none";
+}
+btnAssignment2.onclick = function () {
+    Assignment2.style.display = "block";
+}
+
+// Assignment3
+var Assignment3 = document.getElementById('myAssignment3');
+var btnAssignment3 = document.getElementById("myBtnAssignment3");
+var span = document.getElementsByClassName("close3")[0];
+
+span.onclick = function () {
+    Assignment3.style.display = "none";
+}
+
+btnAssignment3.onclick = function () {
+    Assignment3.style.display = "block";
+}
+
+// Assignment4
+var Assignment4 = document.getElementById('myAssignment4');
+var btnAssignment4 = document.getElementById("myBtnAssignment4");
+var span = document.getElementsByClassName("close4")[0];
+btnAssignment4.onclick = function () {
+    Assignment4.style.display = "block";
+}
+span.onclick = function () {
+    Assignment4.style.display = "none";
+}
+
+
+//  Assignment5
+var Assignment5 = document.getElementById('myAssignment5');
+var btnAssignment5 = document.getElementById("myBtnAssignment5");
+var span = document.getElementsByClassName("close5")[0];
+
+btnAssignment5.onclick = function () {
+    Assignment5.style.display = "block";
+}
+
+span.onclick = function () {
+    Assignment5.style.display = "none";
+}
+
+
+
