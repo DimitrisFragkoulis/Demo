@@ -9,11 +9,11 @@ var img = document.getElementById("image");
 var text = document.getElementById("text");
 
 function setClass(e) {
-  var select = e.target;
-  img.src = select.options[select.selectedIndex].value;
-  text.innerHTML = select.options[select.selectedIndex].dataset.description;
-  // use select.options[select.selectedIndex].getAttribute('data-description'); if you need to support older browsers
-  return false;
+    var select = e.target;
+    img.src = select.options[select.selectedIndex].value;
+    text.innerHTML = select.options[select.selectedIndex].dataset.description;
+    // use select.options[select.selectedIndex].getAttribute('data-description'); if you need to support older browsers
+    return false;
 }
 
 document.getElementById("imgList").onchange = setClass;
@@ -36,7 +36,7 @@ btnAssignment1.onclick = function () {
 span.onclick = function () {
     Assignment1.style.display = "none";
 }
-
+var obj, xmlhttp, myObj, txt = "";
 var xhr = new XMLHttpRequest();
 xhr.open('GET', "https://ipinfo.io/json", true);
 xhr.send();
@@ -44,12 +44,18 @@ xhr.send();
 xhr.addEventListener("readystatechange", proccessRequest, false);
 
 function proccessRequest(e) {
-  if (xhr.readyState == 4 && xhr.status == 200) {
-      var obj = JSON.parse(xhr.responseText);
-      document.getElementById("demo").innerHTML = obj.ip + ", " + obj.country + ", " + obj.org; 
-  }
-}
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        var myObj = JSON.parse(xhr.responseText);
+        //   document.getElementById("demo").innerHTML = obj.ip + ", " + obj.country + ", " + obj.org; 
+        myObj = JSON.parse(this.responseText);
+        txt += "<table border='3'>"
+        {
+            txt += "<tr><th>Ip</th>" + "<th>Country</th>" + "<th>Org</th> </tr>" + "<tr><td>" + myObj.ip + "</td>" + "<td>" + myObj.country + "</td>" + "<td>" + myObj.org + "</td></tr>"
+        }
 
+        document.getElementById("demo").innerHTML = txt;
+    }
+}
 
 // Assignment2
 var Assignment2 = document.getElementById('myAssignment2');
@@ -86,7 +92,6 @@ span.onclick = function () {
     Assignment4.style.display = "none";
 }
 
-
 //  Assignment5
 var Assignment5 = document.getElementById('myAssignment5');
 var btnAssignment5 = document.getElementById("myBtnAssignment5");
@@ -99,6 +104,3 @@ btnAssignment5.onclick = function () {
 span.onclick = function () {
     Assignment5.style.display = "none";
 }
-
-
-
