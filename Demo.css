@@ -30,27 +30,28 @@ h1 {
     width: 100%;
   }
 }
-.image-text {
-  border-radius: 45px;
-  position: absolute;
-  background-color: #212121;
-  text-align: center;
-  top: 275px;
-  height: 521px;
-  left: 500px;
-  width: 1073px;
-}
 
-.image-text img {
-  width: 254px;
-  border-radius: 25%;
-  margin: 15px;
-}
-
-.image-text p {
-  width: 1055px;
+.imagetext {
+  border-radius: 20px;
+  width: 1252px;
+  height: 410px;
+  margin: 0 auto;
+  text-align: justify;
+  margin-top: 150px;
+  background-color: #272727;
   color: white;
+  padding: 10px;
 }
+
+.imagetext img {
+  border-radius: 45px;
+  width: 250px;
+  margin: 15px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .Assignment1, .Assignment2, .Assignment3, .Assignment4, .Assignment5 {
 
   display: none; /* Hidden by default */
@@ -61,6 +62,7 @@ h1 {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
+ 
 }
 
 .Assignment1-content{
@@ -75,7 +77,7 @@ h1 {
   height: 733px;
 }
 #demo table {
-  width: 600px;
+  width: 650px;
   height: 174px;
   border: -15px solid black;
   border-width: 10px;
@@ -103,7 +105,7 @@ h2 {
   position: absolute;
   top: 203px;
   right: 305px;
-  background-color: #ffffe0;
+  background-color: #d4d4d4;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -113,12 +115,20 @@ h2 {
 
 .Assignment2-content img {
   margin: 15px;
+  width: 300px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 15px;
 }
+
 .Assignment2-content p {
   font-size: large;
   position: relative;
   text-align: justify;
-  top: -18px;
+  
+}
+h3 {
+  text-align: center;
 }
 
 
@@ -127,12 +137,12 @@ h2 {
   position: absolute;
   top: 203px;
   right: 305px;
-  background-color: #ffffe0;
+  background-color: #d4d4d4;
   margin: auto;
   padding: 35px;
   border: 1px solid #888;
   width: 67%;
-  height: 752px;
+  height: 673px;
 }
 
 .container{
@@ -140,11 +150,15 @@ h2 {
   justify-content: space-evenly;  
   text-align: center;
 }
+h4 {
+  text-align: center;
+}
+
 .Assignment4-content {
   position: absolute;
   top: 203px;
   right: 305px;
-  background-color: #ffffe0;
+  background-color: #d4d4d4;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -168,7 +182,7 @@ h2 {
   
   margin: 0 auto;
   padding: 10px;
-  background:  #ffffe0;
+  background:  #d4d4d4;
   border-radius: 7px;
   border: 1px solid rgba(0,0,0,0.15);
   box-shadow: 0 1px 1px rgba(50,50,50,0.1);
@@ -200,7 +214,7 @@ h5 {
   position: absolute;
   top: 203px;
   right: 305px;
-  background-color: #ffffe0;
+  background-color: #d4d4d4;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -214,7 +228,7 @@ img#image {
   top: 154px;
 }
 select#imgList  {
-  background-color: lightyellow;
+  background-color: #d4d4d4;
     position: absolute;
     top: 113px;
     left: 581px;
@@ -297,13 +311,13 @@ h6 {
             background: #f8d800;
         }
 
-small {
-  position: absolute;
-  right: 837px;
-  top: 950px;
-  color: white;
-  font-size: medium;
-}
+        small {
+          position: absolute;
+          right: 772px;
+          top: 963px;
+          color: white;
+          font-size: medium;
+      }
 body2 {
   background-color: #0057B8;
   text-align: center;
@@ -318,7 +332,6 @@ body2 {
   width: 200px;
   line-height: 200px;
   text-align: center;
-  /* background-color: rgb(0, 0, 0); */
   border-radius: 50%;
 }
 
