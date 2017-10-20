@@ -36,6 +36,7 @@ btnAssignment1.onclick = function () {
 span.onclick = function () {
     Assignment1.style.display = "none";
 }
+
 var obj, xmlhttp, myObj, txt = "";
 var xhr = new XMLHttpRequest();
 xhr.open('GET', "https://ipinfo.io/json", true);
