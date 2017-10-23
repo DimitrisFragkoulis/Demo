@@ -12,7 +12,6 @@ function setClass(e) {
     var select = e.target;
     img.src = select.options[select.selectedIndex].value;
     text.innerHTML = select.options[select.selectedIndex].dataset.description;
-    // use select.options[select.selectedIndex].getAttribute('data-description'); if you need to support older browsers
     return false;
 }
 
@@ -26,10 +25,12 @@ var btnAssignment1 = document.getElementById("myBtnAssignment1");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close1")[0];
-
+var maincontent = document.getElementsByClassName("imagetext")[0];
 // When the user clicks the button, open the modal 
 btnAssignment1.onclick = function () {
     Assignment1.style.display = "block";
+    maincontent.style.display = "none";
+
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -67,6 +68,7 @@ span.onclick = function () {
 }
 btnAssignment2.onclick = function () {
     Assignment2.style.display = "block";
+    maincontent.style.display = "none";
 }
 
 // Assignment3
@@ -80,6 +82,7 @@ span.onclick = function () {
 
 btnAssignment3.onclick = function () {
     Assignment3.style.display = "block";
+    maincontent.style.display = "none";
 }
 
 // Assignment4
@@ -88,6 +91,7 @@ var btnAssignment4 = document.getElementById("myBtnAssignment4");
 var span = document.getElementsByClassName("close4")[0];
 btnAssignment4.onclick = function () {
     Assignment4.style.display = "block";
+    maincontent.style.display = "none";
 }
 span.onclick = function () {
     Assignment4.style.display = "none";
@@ -100,8 +104,37 @@ var span = document.getElementsByClassName("close5")[0];
 
 btnAssignment5.onclick = function () {
     Assignment5.style.display = "block";
+    maincontent.style.display = "none";
 }
 
 span.onclick = function () {
     Assignment5.style.display = "none";
 }
+
+function renderTime() {
+	var currentTime = new Date();
+	var diem = "AM";
+	var h = currentTime.getHours();
+	var m = currentTime.getMinutes();
+    var s = currentTime.getSeconds();
+	setTimeout('renderTime()',1000);
+    if (h == 0) {
+		h = 12;
+	} else if (h > 12) { 
+		h = h - 12;
+		diem="PM";
+	}
+	if (h < 10) {
+		h = "0" + h;
+	}
+	if (m < 10) {
+		m = "0" + m;
+	}
+	if (s < 10) {
+		s = "0" + s;
+	}
+    var myClock = document.getElementById('clockDisplay');
+	myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+	myClock.innerText = h + ":" + m + ":" + s + " " + diem;
+}
+renderTime();
