@@ -1,9 +1,8 @@
 html {
     font: 0.75em/1.5 sans-serif;
-    background-image: url("./images/Background.jpg");
+    background-image: url("./images/grey-website-background-illusionapparel2.jpg");
     overflow-x: hidden;
 }
-
 body {
   font-family: Helvetica, sans-serif;
   margin: 20px auto;
@@ -12,14 +11,11 @@ body {
 }
 h1 {
   text-align: center;
-  color: white;
+  color: #b1dff1;
   font-size: 40px;
-}
-h1 {
   animation-duration: 3s;
   animation-name: slidein;
 }
-
 @keyframes slidein {
   from {
     margin-left: 100%;
@@ -31,20 +27,18 @@ h1 {
     width: 100%;
   }
 }
-
-.imagetext {
+.startpageContent {
   font-size: larger;
   border-radius: 20px;
   height: auto;
   margin: 0 auto;
   text-align: justify;
   margin-top: 150px;
-  background-color: #272727;
-  color: white;
+  background-color: #efefef;
+  color: #000000;
   padding: 10px;
 }
-
-.imagetext img {
+.startpageContent img {
   border-radius: 45px;
   width: 250px;
   margin: 15px;
@@ -52,21 +46,12 @@ h1 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-
-.Assignment1, .Assignment2, .Assignment3, .Assignment4, .Assignment5 {
+.Assignment {
 
   display: none;
   z-index: 1;
   padding-top: 100px;
 }
-
-.Assignment1-content  {
-  position: relative;
-  margin: -80px;
-  background-image: url(./images/4214905-background-images-for-websites.jpg);
-  height: 652px;
-}
-
 #demo table {
   height: 174px;
   border: -15px solid black;
@@ -76,14 +61,13 @@ h1 {
   font-weight: bold;
   margin: auto;
 }
-.Assignment1-content td {
+#content1 td {
   text-align: center;
 }
-.Assignment1-content p {
+#content1 p {
   margin-top: 60px;
   font-size: x-large;
   text-align: center;
- 
 }
 h2 {
   position: relative;
@@ -91,29 +75,28 @@ h2 {
   font-size: xx-large;
   text-align: center;
 }
+.asc {
 
-.Assignment2-content {
   position: relative;
-  background-color: #d4d4d4;
+  top: 100px;
+  background-image: url(./images/yolo.jpg);
   margin: -90px;
   padding: 20px;
-}
-  
-.Assignment2-content img {
+  border: 1px solid #000000;
+} 
+#content2 img {
   margin: 15px;
-  width: 300px;
+  width: 278px;
     margin-left: 0px;
     margin-top: 0px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
-
-.Assignment2-content p {
-  font-size: large;
+#content2 p {
+  font-size: medium;
   position: relative;
   text-align: justify;
 }
-.Assignment2-content p img {
-
+#content2 p img {
     margin-left: 15px;
     margin-top: 10px;
     margin-right: 0px;
@@ -122,17 +105,7 @@ h3 {
   font-size: x-large;
   text-align: center;
 }
-
-.Assignment3-content {
-  position: relative;
-  background-color: #d4d4d4;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  height: 656px;
-}
-
-.imgtext img{
+.imgtext img {
     margin-top: 78px;
     margin-bottom: 50px;
     width: 300px;
@@ -142,7 +115,9 @@ h3 {
 .imgtext p {
   font-size: large;
 }
-
+.container {
+  text-align: center;
+}
 .container img {
     margin: 15px;
     width: 306px;
@@ -155,68 +130,47 @@ div#Assignment4Background{
   font-size: -webkit-xxx-large;
 
 }
-.Assignment4-content {
-  position: relative;
-  background-color: #d4d4d4;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  height: 608px;
-}
-.Assignment4-content div p {
+#content4 div p {
   position: relative;
   top: -150px;
   font-size: 40px;
   font-family: Share, Helvetica, Arial, sans-serif;
   text-align: center;
 }
-.Assignment4-content div{
+#content4 div{
   text-align: center;
 }
-
-.Assignment4-content select, option {
+#content4 select, option {
   padding: 10px;
-  background: #d4d4d4;
+  background:#b1dff1;
   border-radius: 7px;
   border: 1px solid rgba(0,0,0,0.15);
   box-shadow: 0 1px 1px rgba(50,50,50,0.1);
   cursor: pointer;
   outline: none;
   font-weight: bold;
-  color: rgb(0, 153, 255);
+  color: rgb(0, 0, 0);
 }
-
-
 h5 {
     position: relative;
     text-align: center;
     font-size: 38px;
     top: -40px;
 }
-
-.Assignment5-content{
-  position: relative;
-  background-color: #d4d4d4;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-}
 img#image {
- 
   max-width: 589px;
 }
 select#imgList  {
   padding: 10px;
-  background: #d4d4d4;
+  background:#b1dff1;
   border-radius: 7px;
   border: 1px solid rgba(0,0,0,0.15);
   box-shadow: 0 1px 1px rgba(50,50,50,0.1);
   cursor: pointer;
   outline: none;
   font-weight: bold;
-  color: rgb(0, 153, 255);
+  color: rgb(0, 0, 0);
 }
-
 p#text  {
   position: relative;
   font-size: 40px;
@@ -224,62 +178,50 @@ p#text  {
   text-align: center;
   top: -28px;
 }
-.Assignment5-content div  {
+#content5 div  {
   text-align: center;
 }
 h6 {
-  
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: xx-large;
 }
-
-.close1, .close2, .close3, .close4, .close5 { 
-    width: 30px;
-    height: 30px;
-    line-height: 31px;
-    border-radius: 50%;
-    color: rgb(0, 183, 255);
-    text-align: center;
-    text-decoration: none;
-    background: #000000;
-    box-shadow: 0 0 20px 4px rgb(0, 183, 255);
-    font-size: 25px;
-    position: absolute;
-    right: -21px;
-    top: -16px;
+.close1, .close2, .close3, .close4, .close5 {
+  width: 30px;
+  height: 29px;
+  line-height: 26px;
+  border-radius: 50%;
+  color: rgb(0, 183, 255);
+  text-align: center;
+  text-decoration: none;
+  background: #000000;
+  box-shadow: 0 0 20px 4px rgb(0, 183, 255);
+  font-size: 21px;
+  position: absolute;
+  right: -21px;
+  top: -16px;
 }
-
 .close1:hover, .close2:hover, .close3:hover, .close4:hover, .close5:hover {
-  background: #818181;
+  background:#c5c5c5;
 }
-
 .tabs {
   padding: 0;
   display: table;
   width: 100%;
 }
-
-@media screen and (min-width: 40em) {
-.tabs__item {
-  display: table-cell; /* [4] */
-  float: none;
-  width: auto;
-}
-}
-
-.tabs__link {
-  display: block; /* [5] */
-}
-
+  .tabs li {
+    display: table-cell; /* [4] */
+    float: none;
+    width: auto;      
+  }
 .primary-nav {
   position: relative;
   text-align: center;
   top: 78px;
 }
 .primary-nav a {
-  color: white;
+  display: block;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   text-decoration: none;
@@ -288,35 +230,22 @@ h6 {
   font-weight: 400;
   font-size: 1.75em;
 }
-
 .primary-nav a:hover {
   color: black;
-  background: #f8d800;
+  background: #c3e7ff;
 }
-
- small {
+small {
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
     padding: 1rem;
     text-align: center;
-    color: white;
+    color: #b1dff1;
     font-size: medium;
+    animation-duration: 3s;
+    animation-name: slidein;
       }
-      @keyframes slidein {
-        from {
-          margin-left: 100%;
-          width: 250%; 
-        }
-      
-        to {
-          margin-left: 0%;
-          width: 100%;
-        }
-      }
-      
-      
 .svg {
 
   text-align: right;
@@ -325,7 +254,6 @@ h6 {
 svg#svg {
   float: right;
 }
-
 
 #svg path:nth-child(1) {
   -webkit-animation: pweek 1.8s linear infinite;
@@ -507,28 +435,6 @@ svg#svg {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
-
-@-webkit-keyframes pweek {
-  0% {
-    fill: #0057B8;
-  }
-  20% {
-    fill: #F11E4A;
-  }
-  40% {
-    fill: #F8A527;
-  }
-  60% {
-    fill: #266D7F;
-  }
-  80% {
-    fill: #82A;
-  }
-  100% {
-    fill: #0057B8;
-  }
-}
-
 @keyframes pweek {
   0% {
     fill: #0057B8;
@@ -548,20 +454,4 @@ svg#svg {
   100% {
     fill: #0057B8;
   }
-}
-
-.clockStyle {
-  border-radius: 20px;
-  position: absolute;
-  background-color: #000;
-  border: rgb(0, 153, 255) 2px inset;
-  padding: 6px;
-  color: rgb(0, 183, 255);
-  font-family: "Arial Black", Gadget, sans-serif;
-  font-size: 19px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  display: inline;
-  right: 76px;
-  top: 35px;
 }

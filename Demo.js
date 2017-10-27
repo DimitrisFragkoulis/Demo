@@ -1,43 +1,30 @@
-var Assignment4Background = document.getElementById("Assignment4Background");
 
-function clickOption(value) {
-    Assignment4Background.style.backgroundColor = value;
-    Assignment4Background.innerHTML = "You have selected the " + value;
-}
 
-var img = document.getElementById("image");
-var text = document.getElementById("text");
 
-function setClass(e) {
-    var select = e.target;
-    img.src = select.options[select.selectedIndex].value;
-    text.innerHTML = select.options[select.selectedIndex].dataset.description;
-    return false;
-}
 
-document.getElementById("imgList").onchange = setClass;
+
+
 
 // Assignment1
 var Assignment1 = document.getElementById('myAssignment1');
-
 // Get the button that opens the modal
 var btnAssignment1 = document.getElementById("myBtnAssignment1");
-
-// Get the <span> element that closes the modal
+var startpageContent = document.getElementsByClassName("startpageContent")[0];
 var span = document.getElementsByClassName("close1")[0];
-var maincontent = document.getElementsByClassName("imagetext")[0];
-// When the user clicks the button, open the modal 
-btnAssignment1.onclick = function () {
-    Assignment1.style.display = "block";
-    maincontent.style.display = "none";
-
-}
-
+var assigmentSwitching = document.getElementsByClassName("asc")[0];
 // When the user clicks on <span> (x), close the modal
+
 span.onclick = function () {
     Assignment1.style.display = "none";
+    startpageContent.style.display = "block";
+    
 }
+btnAssignment1.onclick = function () {
+    Assignment1.style.display = "block";
+    startpageContent.style.display = "none";
+    assigmentSwitching.style.dislpay = "none";
 
+}
 var obj, xmlhttp, myObj, txt = "";
 var xhr = new XMLHttpRequest();
 xhr.open('GET', "https://ipinfo.io/json", true);
@@ -65,10 +52,11 @@ var btnAssignment2 = document.getElementById("myBtnAssignment2");
 var span = document.getElementsByClassName("close2")[0];
 span.onclick = function () {
     Assignment2.style.display = "none";
+    startpageContent.style.display = "block";
 }
 btnAssignment2.onclick = function () {
     Assignment2.style.display = "block";
-    maincontent.style.display = "none";
+    startpageContent.style.display = "none";
 }
 
 // Assignment3
@@ -78,63 +66,52 @@ var span = document.getElementsByClassName("close3")[0];
 
 span.onclick = function () {
     Assignment3.style.display = "none";
+    startpageContent.style.display = "block";
 }
-
 btnAssignment3.onclick = function () {
     Assignment3.style.display = "block";
-    maincontent.style.display = "none";
+    startpageContent.style.display = "none";
 }
 
 // Assignment4
 var Assignment4 = document.getElementById('myAssignment4');
 var btnAssignment4 = document.getElementById("myBtnAssignment4");
 var span = document.getElementsByClassName("close4")[0];
-btnAssignment4.onclick = function () {
-    Assignment4.style.display = "block";
-    maincontent.style.display = "none";
-}
 span.onclick = function () {
     Assignment4.style.display = "none";
+    startpageContent.style.display = "block";
+}
+btnAssignment4.onclick = function () {
+    Assignment4.style.display = "block";
+    startpageContent.style.display = "none";
+}
+var Assignment4Background = document.getElementById("Assignment4Background");
+
+function clickOption(value) {
+    Assignment4Background.style.backgroundColor = value;
+    Assignment4Background.innerHTML = "You have selected the " + value;
 }
 
 //  Assignment5
 var Assignment5 = document.getElementById('myAssignment5');
 var btnAssignment5 = document.getElementById("myBtnAssignment5");
 var span = document.getElementsByClassName("close5")[0];
-
-btnAssignment5.onclick = function () {
-    Assignment5.style.display = "block";
-    maincontent.style.display = "none";
-}
-
 span.onclick = function () {
     Assignment5.style.display = "none";
+    startpageContent.style.display = "block";
+}
+btnAssignment5.onclick = function () {
+    Assignment5.style.display = "block";
+    startpageContent.style.display = "none";
 }
 
-function renderTime() {
-	var currentTime = new Date();
-	var diem = "AM";
-	var h = currentTime.getHours();
-	var m = currentTime.getMinutes();
-    var s = currentTime.getSeconds();
-	setTimeout('renderTime()',1000);
-    if (h == 0) {
-		h = 12;
-	} else if (h > 12) { 
-		h = h - 12;
-		diem="PM";
-	}
-	if (h < 10) {
-		h = "0" + h;
-	}
-	if (m < 10) {
-		m = "0" + m;
-	}
-	if (s < 10) {
-		s = "0" + s;
-	}
-    var myClock = document.getElementById('clockDisplay');
-	myClock.textContent = h + ":" + m + ":" + s + " " + diem;
-	myClock.innerText = h + ":" + m + ":" + s + " " + diem;
+var img = document.getElementById("image");
+
+var text = document.getElementById("text");
+
+document.getElementById("imgList").onchange = function (e) {
+    var select = e.target;
+    img.src = select.options[select.selectedIndex].value;
+    text.innerHTML = select.options[select.selectedIndex].dataset.description;
+    return false;
 }
-renderTime();
